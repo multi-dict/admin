@@ -32,13 +32,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
+    'nested_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
- ]
+    'dictionaries',
+    'languages',
+    'words',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

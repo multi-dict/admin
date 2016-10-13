@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
 
 urlpatterns = [
     url(r'^', admin.site.urls),
+    url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
+    url(r'^nested_admin/', include('nested_admin.urls')),
 
 ]
