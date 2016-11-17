@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Costum user model
+AUTH_USER_MODEL = "users.User"
 
 # Application definition
 
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'dictionaries',
     'languages',
     'words',
+    'users',
 ]
 
 MIDDLEWARE = [
