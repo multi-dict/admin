@@ -1,20 +1,20 @@
 from django.contrib import admin
-from .models import Dictionaries
-from words.models import Temp, Words
+from .models import Dictionary
+from words.models import Entity, Word
 from nested_admin import NestedTabularInline, NestedModelAdmin, NestedStackedInline
 
-class WordsInline(NestedTabularInline):
-	model = Words
+class WordInline(NestedTabularInline):
+	model = Word
 	classes = ('grp-collapse grp-open',)
 	extra = 0
 
-class TempInline(NestedTabularInline):
-	model = Temp
-	inlines = [WordsInline]
+class EntityInline(NestedTabularInline):
+	model = Entity
+	inlines = [WordInline]
 	extra = 0
 
-class DictionariesAdmin(NestedModelAdmin):
-	inlines = [TempInline]
+class DictionaryAdmin(NestedModelAdmin):
+	inlines = [EntityInline]
 
-admin.site.register(Dictionaries, DictionariesAdmin)
+admin.site.register(Dictionary, DictionaryAdmin)
 

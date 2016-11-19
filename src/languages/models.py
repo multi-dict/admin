@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Languages(models.Model):
+class Language(models.Model):
 	name = models.CharField(max_length=255, blank=False, null=False)
 	ISO_2 = models.CharField(max_length=2, blank=False, null=False, unique=True)
 	

@@ -1,18 +1,18 @@
 from django.db import models
-from dictionaries.models import Dictionaries
-from languages.models import Languages
+from dictionaries.models import Dictionary
+from languages.models import Language
 
 
-class Temp(models.Model):
-	dictionary = models.ForeignKey(Dictionaries)
+class Entity(models.Model):
+	dictionary = models.ForeignKey(Dictionary)
 	
 	class Meta:
-		verbose_name = 'Translation'
-		verbose_name_plural = 'Translations'
+		verbose_name = 'Entity'
+		verbose_name_plural = 'Entities'
 
-class Words(models.Model):
-	language = models.ForeignKey(Languages)
-	temp = models.ForeignKey(Temp)
+class Word(models.Model):
+	language = models.ForeignKey(Language)
+	entity = models.ForeignKey(Entity)
 	word = models.CharField(max_length=255)
 	sex = models.CharField(choices=(('male', 'Male'), ('female', 'Female')), max_length=10, blank=True)
 	description = models.CharField(max_length=255, blank=True)

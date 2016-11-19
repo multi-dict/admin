@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Languages
+from .models import Language
 
-class LanguagesAdmin(admin.ModelAdmin):
+class LanguageAdmin(admin.ModelAdmin):
 	pass
 	
-admin.site.register(Languages, LanguagesAdmin)
+admin.site.register(Language, LanguageAdmin)
 
