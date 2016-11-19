@@ -1,9 +1,9 @@
 from django.db import models
-from languages.models import Languages
+from languages.models import Language
 
-class Dictionaries(models.Model):
+class Dictionary(models.Model):
 	name = models.CharField(max_length=255, blank=False, null=False)
-	languages = models.ManyToManyField(Languages)
+	languages = models.ManyToManyField(Language)
 
 	def __str__(self):
 		return self.name
