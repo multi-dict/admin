@@ -26,7 +26,7 @@ SECRET_KEY = '@pla9u21==w#&vr+autjb9i&noxhh-id@-2)0!z*9lrl9@*#aj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Costum user model
 AUTH_USER_MODEL = "users.User"
@@ -76,6 +76,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'admin.wsgi.application'
 
