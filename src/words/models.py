@@ -14,7 +14,7 @@ class Word(models.Model):
 	language = models.ForeignKey(Language)
 	entity = models.ForeignKey(Entity)
 	word = models.CharField(max_length=255)
-	sex = models.CharField(choices=(('male', 'Male'), ('female', 'Female')), max_length=10, blank=True, null=True)
+	gender = models.CharField(choices=(('male', 'Male'), ('female', 'Female'), ('genderless', 'Genderless')), max_length=10, blank=True, null=True)
 	description = models.CharField(max_length=255, blank=True, null=True)
 	source = models.CharField(max_length=255, blank=True, null=True)
 
